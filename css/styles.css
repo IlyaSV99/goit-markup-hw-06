@@ -117,6 +117,8 @@ header {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -152,6 +154,9 @@ header {
 }
 
 .contacts-information .contacts-data {
+    display: flex;
+    align-items: center;
+   
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--primary-text-color);
@@ -161,6 +166,8 @@ header {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-information .contacts-data:hover,
@@ -170,6 +177,8 @@ header {
 
 .contacts-data .contacts-icon {
     fill:var(--primary-text-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-data:hover svg,
@@ -406,6 +415,8 @@ header {
 }
 
 .profession {
+    margin-bottom: 16px;
+
     color: var(--primary-text-color);
     font-weight: normal;
     font-size: 16px;
@@ -428,6 +439,8 @@ header {
 
     border-radius: 50%;
     cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-socials-list {
@@ -455,6 +468,8 @@ header {
 
 .team-socials-icon {
     fill: #afb1b8;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-socials-item:hover .team-socials-icon,
 .team-socials-item:focus .team-socials-icon {
@@ -481,6 +496,8 @@ header {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     cursor: pointer;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link {
@@ -493,6 +510,8 @@ header {
 
 .clients-icon {
     fill: var(--icon-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -521,6 +540,10 @@ header {
     margin-right: 8px;
     padding: 6px 22px;
     border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio .button:last-child {
     margin-right: 0;
@@ -559,6 +582,7 @@ header {
     margin-right: 30px;
     margin-bottom: 30px;
 
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     /* overflow: hidden; */
 }
 
@@ -653,6 +677,7 @@ footer {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-information .item {
@@ -759,7 +784,7 @@ footer {
 }
 
 .subscribe-form {
-    padding-top: 12px;
+
     margin-left: auto;
 
 }
@@ -819,9 +844,39 @@ footer {
     border-radius: 4px;
 }
 
+.subscribe-svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    fill: var(--title-text-color);
+}
+
+.mod-input:focus ,
+.mod-comment:focus {
+    border-color: var(--accent-color);
+    outline: var(--accent-color);
+}
+
 .subscribe-btn span {
     margin-right: 10px;
 }
+
+.mod-container:focus-within > .form-label {
+    transform: translateY(-50px);
+}
+
+.mod-input:focus + .subscribe-svg {
+    fill: var(--accent-color);
+
+    transition: fill 250ms cubic-bezier();
+}
+
+.mod-input:not(:placeholder-shown) + .mod-label {
+    transform: translateY(-50px);
+}
+
 
 
 /* модалка */
