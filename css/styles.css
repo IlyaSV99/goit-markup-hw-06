@@ -47,6 +47,10 @@ body {
     letter-spacing: 0.03em;
 }
 
+img {
+    display: block;
+}
+
 .container {
     width: 1200px;
     margin-left: auto;
